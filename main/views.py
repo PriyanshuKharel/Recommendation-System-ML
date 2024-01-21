@@ -41,6 +41,9 @@ def predict(request):
 def visual(request):
     return render(request, 'visualization.html')
 
+def description(request):
+    return render(request, 'description.html')
+
 def logoutUser(request):
     logout(request)
     return redirect("/login")

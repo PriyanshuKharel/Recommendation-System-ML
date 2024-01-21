@@ -61,6 +61,22 @@
       tbody tr:nth-child(even) {
         background-color: #f8f9fa;
       }
+
+      /* Added styles for the navbar */
+      .navbar {
+        background-color: #007bff;
+        padding: 10px;
+      }
+
+      .navbar a {
+        color: #fff;
+        margin-right: 10px;
+      }
+
+      .navbar a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
@@ -69,13 +85,23 @@
         <div class="col-md-8">
           <h1 class="text-center">Recommendation System</h1>
         </div>
-        <div class="col-md-4 text-end">
-          <a class="btn btn-primary" href="/logout">Logout</a>
-          <a class="btn btn-primary" href="/visualization">Visualization</a>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-md-4 text-start">
+          <div class="navbar">
+            <a class="btn btn-primary" href="/visualization">Visualization</a>
+            <a class="btn-btn-primary" href="/description">Description</a>
+            <a class="btn btn-primary" href="/logout">Logout</a>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Table Section -->
     <div class="container my-4">
       <div class="col-md-12">
         {% if model|length > 0 %}
